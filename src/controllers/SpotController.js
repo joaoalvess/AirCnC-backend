@@ -1,5 +1,6 @@
 const User = require('../models/User')
 const Spot = require('../models/Spot')
+const filename = require('../../uploads/WhatsApp Image 2020-01-15 at 21.17.06.jpeg')
 
 module.exports = {
   async index(req, res) {
@@ -11,7 +12,6 @@ module.exports = {
   },
 
   async store(req, res){
-    const { filename } = req.file;
     const { company, techs, price } = req.body;
     const { user_id } = req.headers;
 
